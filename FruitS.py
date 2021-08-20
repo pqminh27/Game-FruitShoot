@@ -8,8 +8,6 @@ pineapple = Actor("pineapple")
 def draw():
     screen.clear()
     screen.draw.circle((400, 300), 30, 'blue')
-    
-    
     screen.fill("cyan")
     # color background
     apple.draw()
@@ -21,13 +19,13 @@ def place_apple():
     apple.y = randint(0, 550)
 
 def place_pineapple():
-    pineapple.x = randint(50, 700)
-    pineapple.y = randint(50, 500)
+    pineapple.x = randint(40, 700)
+    pineapple.y = randint(40, 500)
 place_pineapple()
 
 def place_orange():
-    orange.x = randint(50, 600)
-    orange.y = randint(50, 300)
+    orange.x = randint(40, 600)
+    orange.y = randint(40, 300)
 place_orange()
 
 def on_mouse_down(pos):
@@ -35,7 +33,7 @@ def on_mouse_down(pos):
             print("Good shot!!!")
             place_apple()
         else:
-            print("You missed the target!!!")
+            print("Missed the Apple!!!")
         if pineapple.collidepoint(pos):
             place_pineapple() 
         if orange.collidepoint(pos):
