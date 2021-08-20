@@ -1,4 +1,4 @@
-import pgzrun, time
+import pgzrun
 from random import randint
 
 apple = Actor("apple")
